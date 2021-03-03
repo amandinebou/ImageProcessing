@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="javafx.scene.layout.StackPane" xmlns:fx="http://javafx.com/fxml" >
+    <VBox xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          prefHeight="400.0" prefWidth="600.0"
+          spacing="20">
+
+        <Label text="Mise à l'échelle de l'image" style="-fx-font-weight: bold">
+            <font>
+                <Font size="20"/>
+            </font>
+        </Label>
+        <Label fx:id="labWidth" text="Largeur"/>
+        <Slider fx:id="sliderRescaleWidth" minWidth="500" blockIncrement="1" majorTickUnit="50" min="0" max="500" value="500" minorTickCount="10" showTickLabels="true" showTickMarks="true"/>
+        <Label fx:id="labHeight" text="Hauteur" />
+        <Slider fx:id="sliderRescaleHeight" minWidth="500"  blockIncrement="1" majorTickUnit="50" min="0" max="500" value="500" minorTickCount="10" showTickLabels="true" showTickMarks="true"/>
+        <Button fx:id="run" text="Traitement de l'image" onAction="#treatRescale"/>
+
+    </VBox>
+</fx:root>

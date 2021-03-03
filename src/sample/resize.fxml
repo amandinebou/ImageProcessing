@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="javafx.scene.layout.StackPane" xmlns:fx="http://javafx.com/fxml" >
+    <VBox xmlns="http://javafx.com/javafx"
+                xmlns:fx="http://javafx.com/fxml"
+                prefHeight="400.0" prefWidth="600.0"
+                spacing="20">
+
+        <Label text="Recadrage de l'image" style="-fx-font-weight: bold">
+            <font>
+                <Font size="20"/>
+            </font>
+        </Label>
+        <Label fx:id="labLeft" text="Rognage à gauche" />
+        <Slider fx:id="sliderResizeLeft" minWidth="500" blockIncrement="1" majorTickUnit="50" min="0" max="500" value="500" minorTickCount="10" showTickLabels="true" showTickMarks="true"/>
+        <Label fx:id="labRight" text="Rognage à droite" />
+        <Slider fx:id="sliderResizeRight" minWidth="500"  blockIncrement="1" majorTickUnit="50" min="0" max="500" value="500" minorTickCount="10" showTickLabels="true" showTickMarks="true"/>
+        <Label fx:id="labTop" text="Rognage en haut" />
+        <Slider fx:id="sliderResizeTop" minWidth="500" blockIncrement="1" majorTickUnit="50" min="0" max="500" value="500" minorTickCount="10" showTickLabels="true" showTickMarks="true"/>
+        <Label fx:id="labBottom" text="Rognage en bas" />
+        <Slider fx:id="sliderResizeBottom" minWidth="500"  blockIncrement="1" majorTickUnit="50" min="0" max="500" value="500" minorTickCount="10" showTickLabels="true" showTickMarks="true"/>
+        <Button fx:id="run" text="Traitement de l'image" onAction="#treatResize"/>
+
+    </VBox>
+</fx:root>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+<fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml"
+>
+    <Canvas fx:id="canvasColorPick" layoutX="4.0" layoutY="4.0" width="80" height="80" />
+    <Label text="Rouge"/>
+    <Slider  fx:id="sliderColorR" blockIncrement="1" majorTickUnit="50" min="1" max="255" value="255" minorTickCount="1" showTickLabels="true" showTickMarks="true" />
+    <Label text="Vert"/>
+    <Slider  fx:id="sliderColorG" blockIncrement="1" majorTickUnit="50" min="1" max="255" value="0" minorTickCount="1" showTickLabels="true" showTickMarks="true" />
+    <Label text="Bleu"/>
+    <Slider  fx:id="sliderColorB" blockIncrement="1" majorTickUnit="50" min="1" max="255" value="0" minorTickCount="1" showTickLabels="true" showTickMarks="true" />
+</fx:root>

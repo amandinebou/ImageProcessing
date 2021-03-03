@@ -1,0 +1,76 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.StackPane?>
+<?import sample.ResizeController?>
+<?import sample.RescaleController?>
+<?import sample.SeamController?>
+<?import javafx.scene.canvas.Canvas?>
+<?import sample.DrawController?>
+
+<BorderPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <MenuBar >
+            <Menu text="Fichier">
+                <MenuItem text="Charger une image" onAction="#loadImage"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Sauvegarder" onAction="#saveImage"/>
+            </Menu>
+
+            <Menu>
+                <graphic>
+                    <Label fx:id="resizeMenu" text="Recadrage" onMouseClicked="#resizeImage"/>
+                </graphic>
+            </Menu>
+            <Menu>
+                <graphic>
+                    <Label fx:id="rescaleMenu" text="Mise à l'échelle" onMouseClicked="#rescaleImage"/>
+                </graphic>
+            </Menu>
+            <Menu>
+                <graphic>
+                    <Label fx:id="seamMenu" text="Seam Carving" onMouseClicked="#seamImage"/>
+                </graphic>
+            </Menu>
+            <Menu>
+                <graphic>
+                    <Label fx:id="drawMenu" text="Dessiner" onMouseClicked="#drawImage"/>
+                </graphic>
+            </Menu>
+            <Menu>
+                <graphic>
+                    <Label fx:id="undo" text="↩ Undo" onMouseClicked="#treatUndo"/>
+                </graphic>
+            </Menu>
+            <Menu fx:id="menuUndo">
+                <graphic>
+                    <Label fx:id="redo" text="Redo ↪" onMouseClicked="#treatRedo"/>
+                </graphic>
+            </Menu>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox fx:id="vBox" spacing="30">
+            <StackPane>
+                <ImageView fx:id = "imageView"/>
+                <Canvas fx:id="drawImage"/>
+            </StackPane>
+
+        </VBox>
+    </left>
+    <right>
+        <StackPane >
+            <ResizeController visible="false" fx:id="resizeController" />
+            <RescaleController visible="false" fx:id="rescaleController"/>
+            <SeamController visible="false" fx:id="seamController"/>
+            <DrawController visible ="false" fx:id="drawController"/>
+        </StackPane>
+    </right>
+</BorderPane>
+
+
