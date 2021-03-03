@@ -40,10 +40,4 @@ Draw what you want!
 
 - **Undo/Redo**
 
-Did you make a mistake? No problem! Go back to your previous actions, you can also go back to the next action.A
-
-
-
-
-
-Translated with www.DeepL.com/Translator (free version)
+Did you make a mistake? No problem! Go back to your previous actions, you can also go back to the next action.
